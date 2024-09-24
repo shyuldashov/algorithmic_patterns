@@ -15,9 +15,9 @@
 
 ## Two Pointers
 
-1. [Pair with Target Sum](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/pair-with-target-sum-easy) | [Solve](two_pointers/pair_with_target_sum.py)
-2. [Find Non-Duplicate Number Instances](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/find-nonduplicate-number-instances-easy) | [Solve](two_pointers/find_non_duplicate_nums_insances.py)
-3. [Squaring a Sorted Array](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/squaring-a-sorted-array-easy) | [Solve](two_pointers/squaring_sorted_array.py)
+1. [Pair with Target Sum](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/pair-with-target-sum-easy) | [Solve](two_pointers/easy/pair_with_target_sum.py)
+2. [Find Non-Duplicate Number Instances](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/find-nonduplicate-number-instances-easy) | [Solve](two_pointers/easy/find_non_duplicate_nums_insances.py)
+3. [Squaring a Sorted Array](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/squaring-a-sorted-array-easy) | [Solve](two_pointers/easy/squaring_sorted_array.py)
 4. []() | [Solve]()
 5. []() | [Solve]()
 6. []() | [Solve]()
