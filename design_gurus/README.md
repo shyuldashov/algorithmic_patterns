@@ -20,7 +20,7 @@
 3. [Squaring a Sorted Array](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/squaring-a-sorted-array-easy) | [Solve](two_pointers/easy/squaring_sorted_array.py)
 4. [Triplet Sum to Zero](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/triplet-sum-to-zero-medium) | [Solve](two_pointers/medium/triplet_sum_zero.py)
 5. [Triplet Sum Close to Target](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/triplet-sum-close-to-target-medium) | [Solve](two_pointers/medium/triplet_sum_close_target.py)
-6. []() | [Solve]()
+6. [Triplets with Smaller Sum](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/triplets-with-smaller-sum-medium) | [Solve](two_pointers/medium/triplets_with_smaller_sum.py)
 7. []() | [Solve]()
 8. []() | [Solve]()
 9. []() | [Solve]()
