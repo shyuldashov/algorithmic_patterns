@@ -1,3 +1,6 @@
+from design_gurus.tests.test_two_pointers import test_for_two_pointers
+
+
 class Solution:
     def two_pointers_first(self, nums: list[int], target: int) -> int:
         """
@@ -79,26 +82,15 @@ class Solution:
 
 if __name__ == "__main__":
     solve = Solution()
+    test_case: list[tuple[list[int], int, int]] = [
+        ([-1, 0, 2, 3], 3, 2),
+        ([-3, -1, 1, 2], 1, 0),
+        ([1, 0, 1, 1], 100, 3),
+        ([0, 0, 1, 1, 2, 6], 5, 4),
+        ([0, 0, 0], 0, 0),
+        ([1, 2, 3, 4, 5], 6, 6),
+        ([39, -55, 11, 69, 4, -9, 6, 23], -72, -60),
+    ]
 
-    def test(foo) -> None:
-        test_case: list[tuple[list[int], int, int]] = [
-            ([-1, 0, 2, 3], 3, 2),
-            ([-3, -1, 1, 2], 1, 0),
-            ([1, 0, 1, 1], 100, 3),
-            ([0, 0, 1, 1, 2, 6], 5, 4),
-            ([0, 0, 0], 0, 0),
-            ([1, 2, 3, 4, 5], 6, 6),
-            ([39, -55, 11, 69, 4, -9, 6, 23], -72, -60),
-        ]
-
-        for data, target, expected in test_case:
-            result = foo(data, target)
-
-            assert (
-                result == expected
-            ), f"{data}, {target} - got {result}, expected {expected}"
-
-        print("ok")
-
-    test(solve.two_pointers_first)
-    test(solve.two_pointers_second)
+    test_for_two_pointers(solve.two_pointers_first, test_case)
+    test_for_two_pointers(solve.two_pointers_second, test_case)
