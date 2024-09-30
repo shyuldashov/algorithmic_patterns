@@ -25,4 +25,16 @@
 8. [Dutch National Flag Problem](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/dutch-national-flag-problem-medium) | [Solve](two_pointers/medium/dutch_national_flag_problem.py)
 9. [Quadruple Sum to Target](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/problem-challenge-1-quadruple-sum-to-target-medium) | [Solve](two_pointers/medium/quadruple_sum_to_target.py)
 10. [Comparing Strings containing Backspaces](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/problem-challenge-2-comparing-strings-containing-backspaces-medium) | [Solve](two_pointers/medium/comparing_strings_containing_bacspaces.py)
-11. []() | [Solve]()
+11. [Minimum Window Sort](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/problem-challenge-3-minimum-window-sort-medium) | [Solve](two_pointers/medium/minimum_window_sort.py)
+
+---
+
+## Fast & Slow Pointers
+
+1. []() | [Solve]()
+2. []() | [Solve]()
+3. []() | [Solve]()
+4. []() | [Solve]()
+5. []() | [Solve]()
+6. []() | [Solve]()
+7. []() | [Solve]()
