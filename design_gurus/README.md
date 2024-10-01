@@ -32,8 +32,8 @@
 ## Fast & Slow Pointers
 
 1. [LinkedList Cycle](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/linkedlist-cycle-easy) | [Solve](fast_and_slow_pointers/easy/linked_list_cycle.py)
-2. []() | [Solve]()
-3. []() | [Solve]()
+2. [Middle of the LinkedList](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/middle-of-the-linkedlist-easy) | [Solve](fast_and_slow_pointers/easy/middle_of_the_linked_list.py)
+3. [Start of LinkedList Cycle](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/start-of-linkedlist-cycle-medium) | [Solve](fast_and_slow_pointers/medium/start_of_linked_list_cycle.py)
 4. []() | [Solve]()
 5. []() | [Solve]()
 6. []() | [Solve]()
