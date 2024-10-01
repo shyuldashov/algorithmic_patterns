@@ -1,4 +1,4 @@
-DIRS = design_gurus
+DIRS = design_gurus basic_algorithms data_structures
 VALIDATORS = flake8 pylint mypy
 
 dev-pep8:
