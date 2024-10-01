@@ -35,6 +35,6 @@
 2. [Middle of the LinkedList](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/middle-of-the-linkedlist-easy) | [Solve](fast_and_slow_pointers/easy/middle_of_the_linked_list.py)
 3. [Start of LinkedList Cycle](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/start-of-linkedlist-cycle-medium) | [Solve](fast_and_slow_pointers/medium/start_of_linked_list_cycle.py)
 4. [Happy Number](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/happy-number-medium) | [Solve](fast_and_slow_pointers/medium/happy_number.py)
-5. []() | [Solve]()
+5. [Palindrome LinkedList](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/problem-challenge-1-palindrome-linkedlist-medium) | [Solve](fast_and_slow_pointers/medium/palindrome_linked_list.py)
 6. []() | [Solve]()
 7. []() | [Solve]()
