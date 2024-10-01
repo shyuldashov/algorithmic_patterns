@@ -31,7 +31,7 @@
 
 ## Fast & Slow Pointers
 
-1. []() | [Solve]()
+1. [LinkedList Cycle](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/linkedlist-cycle-easy) | [Solve](fast_and_slow_pointers/easy/linked_list_cycle.py)
 2. []() | [Solve]()
 3. []() | [Solve]()
 4. []() | [Solve]()
