@@ -36,7 +36,7 @@ if __name__ == "__main__":
         (1, True),
         (65536, False),
         (25, False),
-        (1111, False)
+        (1111, False),
     ]
 
     check_result(solve.is_happy, test_case)
