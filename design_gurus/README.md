@@ -36,5 +36,5 @@
 3. [Start of LinkedList Cycle](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/start-of-linkedlist-cycle-medium) | [Solve](fast_and_slow_pointers/medium/start_of_linked_list_cycle.py)
 4. [Happy Number](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/happy-number-medium) | [Solve](fast_and_slow_pointers/medium/happy_number.py)
 5. [Palindrome LinkedList](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/problem-challenge-1-palindrome-linkedlist-medium) | [Solve](fast_and_slow_pointers/medium/palindrome_linked_list.py)
-6. []() | [Solve]()
+6. [Rearrange a LinkedList](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/problem-challenge-2-rearrange-a-linkedlist-medium) | [Solve](fast_and_slow_pointers/medium/rearrange_linked_list.py)
 7. []() | [Solve]()
