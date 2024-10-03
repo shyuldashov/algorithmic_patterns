@@ -37,4 +37,18 @@
 4. [Happy Number](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/happy-number-medium) | [Solve](fast_and_slow_pointers/medium/happy_number.py)
 5. [Palindrome LinkedList](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/problem-challenge-1-palindrome-linkedlist-medium) | [Solve](fast_and_slow_pointers/medium/palindrome_linked_list.py)
 6. [Rearrange a LinkedList](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/problem-challenge-2-rearrange-a-linkedlist-medium) | [Solve](fast_and_slow_pointers/medium/rearrange_linked_list.py)
+
+---
+
+## Sliding Window
+
+1. [Maximum Sum Subarray of Size K](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/maximum-sum-subarray-of-size-k-easy) | [Solve](sliding_window/easy/max_sum_subarray_of_size_k.py)
+2. []() | [Solve]()
+3. []() | [Solve]()
+4. []() | [Solve]()
+5. []() | [Solve]()
+6. []() | [Solve]()
 7. []() | [Solve]()
+8. []() | [Solve]()
+9. []() | [Solve]()
+10. []() | [Solve]()
