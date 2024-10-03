@@ -43,7 +43,7 @@
 ## Sliding Window
 
 1. [Maximum Sum Subarray of Size K](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/maximum-sum-subarray-of-size-k-easy) | [Solve](sliding_window/easy/max_sum_subarray_of_size_k.py)
-2. []() | [Solve]()
+2. [Smallest Subarray With a Greater Sum](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/smallest-subarray-with-a-greater-sum-easy) | [Solve](sliding_window/easy/smalles_subarray_with_greater_sum.py)
 3. []() | [Solve]()
 4. []() | [Solve]()
 5. []() | [Solve]()
