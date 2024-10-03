@@ -3,6 +3,13 @@ from design_gurus.tests.test_two_pointers import test_for_two_pointers
 
 class Solution:
     def maximum_subarray_sum(self, nums: list[int], k: int) -> int:
+        """
+        Time Complexity: O(n)
+        Space Complexity: O(1)
+        :param nums:
+        :param k:
+        :return:
+        """
         temp_sum: int = sum(nums[:k])
 
         max_sum: int = 0
