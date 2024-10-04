@@ -44,7 +44,7 @@
 
 1. [Maximum Sum Subarray of Size K](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/maximum-sum-subarray-of-size-k-easy) | [Solve](sliding_window/easy/max_sum_subarray_of_size_k.py)
 2. [Smallest Subarray With a Greater Sum](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/smallest-subarray-with-a-greater-sum-easy) | [Solve](sliding_window/easy/smalles_subarray_with_greater_sum.py)
-3. []() | [Solve]()
+3. [Longest Substring with K Distinct Characters](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/longest-substring-with-k-distinct-characters-medium) | [Solve](sliding_window/medium/longest_substring_with_k_distinct_chars.py)
 4. []() | [Solve]()
 5. []() | [Solve]()
 6. []() | [Solve]()
