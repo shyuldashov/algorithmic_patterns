@@ -3,6 +3,13 @@ from design_gurus.tests.test_two_pointers import test_for_two_pointers
 
 class Solution:
     def longest_substring(self, line: str, k) -> int:
+        """
+        Time Complexity: O(n^2)
+        Space Complexity: O(n)
+        :param line:
+        :param k:
+        :return:
+        """
         max_longest: int = 0
         length: int = len(line)
 
