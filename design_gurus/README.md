@@ -53,7 +53,7 @@
 
 1. [Merge Intervals](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/merge-intervals-medium) | [Solve](merge_intervals/medium/merge_intervals.py)
 2. [Insert Interval](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/insert-interval-medium) | [Solve](merge_intervals/medium/insert_interval.py)
-3. []() | [Solve]()
+3. [Intervals Intersection](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/intervals-intersection-medium) | [Solve](merge_intervals/medium/intervals_intersection.py)
 4. []() | [Solve]()
 5. []() | [Solve]()
 6. []() | [Solve]()
