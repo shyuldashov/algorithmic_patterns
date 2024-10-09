@@ -54,7 +54,7 @@
 1. [Merge Intervals](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/merge-intervals-medium) | [Solve](merge_intervals/medium/merge_intervals.py)
 2. [Insert Interval](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/insert-interval-medium) | [Solve](merge_intervals/medium/insert_interval.py)
 3. [Intervals Intersection](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/intervals-intersection-medium) | [Solve](merge_intervals/medium/intervals_intersection.py)
-4. []() | [Solve]()
+4. [Conflicting Appointments](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/conflicting-appointments-medium) | [Solve](merge_intervals/medium/conflicting_appointments.py)
 5. []() | [Solve]()
 6. []() | [Solve]()
 7. []() | [Solve]()
