@@ -18,82 +18,24 @@ class Solution:
         if not new_interval:
             return intervals
 
-        start, end = new_interval
-        curr: int = 0
-        length: int = len(intervals)
-        while curr < length and intervals[curr][1] < start:
-            curr += 1
+        result: list[list[int]] = []
+        new_start, new_end = new_interval
+        for i in range(len(intervals)):
+            curr_start, curr_end = intervals[i]
 
-        intervals.insert(curr, new_interval)
+            if new_end < curr_start:
+                result.append([new_start, new_end])
+                return result + intervals[i:]
 
-        return self._merge_intervals_in_place(intervals)
-
-    def _merge_intervals_in_place(
-        self, intervals: list[list[int]]
-    ) -> list[list[int]]:
-        length: int = len(intervals)
-        left: int = 0
-        curr: int = 1
-        while curr < length:
-
-            if intervals[curr][0] <= intervals[left][1]:
-                intervals[left][1] = max(
-                    intervals[left][1],
-                    intervals[curr][1],
-                )
+            if new_start > curr_end:
+                result.append(intervals[i])
             else:
-                left += 1
-                intervals[left] = intervals[curr]
+                new_start = min(curr_start, new_start)
+                new_end = max(curr_end, new_end)
 
-            curr += 1
+        result.append([new_start, new_end])
 
-        return intervals[: left + 1]
-
-    def insert_interval_in_place(
-        self, intervals: list[list[int]], new_interval: list[int]
-    ) -> list[list[int]]:
-        """
-        Time Complexity: O(n)
-        Space Complexity: O(1)
-        :param intervals:
-        :param new_interval:
-        :return:
-        """
-        if not intervals:
-            return [new_interval]
-
-        if not new_interval:
-            return intervals
-
-        start, end = new_interval
-        curr: int = 0
-        length: int = len(intervals)
-        while curr < length and intervals[curr][1] < start:
-            curr += 1
-
-        if not curr:
-            intervals.insert(0, new_interval)
-            return intervals
-
-        if curr == length:
-            intervals.append(new_interval)
-            return intervals
-
-        left: int = curr
-        while curr < length and intervals[curr][0] <= end:
-            start = min(start, intervals[curr][0])
-            end = max(end, intervals[curr][1])
-            curr += 1
-
-        intervals[left] = [start, end]
-        left += 1
-
-        while curr < length:
-            intervals[left] = intervals[curr]
-            left += 1
-            curr += 1
-
-        return intervals[:left]
+        return result
 
 
 if __name__ == "__main__":
@@ -111,7 +53,9 @@ if __name__ == "__main__":
             [1, 3],
             [[1, 3], [4, 6], [8, 10], [15, 18]],
         ),
+        ([[1, 3], [6, 9]], [2, 5], [[1, 5], [6, 9]]),
+        ([[5, 7]], [1, 7], [[1, 7]]),
+        ([], [5, 7], [[5, 7]]),
     ]
 
-    test_for_two_pointers(solve.insert_interval_in_place, test_case)
     test_for_two_pointers(solve.insert_interval, test_case)
