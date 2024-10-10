@@ -61,9 +61,9 @@
 ## Cyclic Sort
 
 1. [Cyclic Sort](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/cyclic-sort-easy) | [Solve](cyclic_sort/easy/cyclic_sort.py)
-2. []() | [Solve]()
-3. []() | [Solve]()
-4. []() | [Solve]()
-5. []() | [Solve]()
+2. [Find the Missing Number](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/find-the-missing-number-easy) | [Solve](cyclic_sort/easy/find_the_missing_number.py)
+3. [Find all Missing Numbers](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/find-all-missing-numbers-easy) | [Solve](cyclic_sort/easy/find_all_missing_numbers.py)
+4. [Find the Duplicate Number](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/find-the-duplicate-number-easy) | [Solve](cyclic_sort/easy/find_the_duplicate_number.py)
+5. [Find all Duplicate Numbers](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/find-all-duplicate-numbers-easy) | [Solve](cyclic_sort/easy/find_all_duplicate_nums.py)
 6. []() | [Solve]()
 7. []() | [Solve]()
