@@ -1,15 +1,16 @@
 from typing import Any, Optional, Sequence
 
 from data_structures.linked_lists.base import BaseLinkedList
-from data_structures.linked_lists.nodes import SinglyLinkedListNode
+from data_structures.linked_lists.nodes import DoublyLinkedListNode
 from data_structures.linked_lists.utils import PrintLinkedList
 
-__all__ = ["SinglyLinkedList"]
+__all__ = ["DoublyLinkedList"]
 
 
-class SinglyLinkedList(BaseLinkedList):
+class DoublyLinkedList(BaseLinkedList):
     def __init__(self) -> None:
-        self.head: Optional[SinglyLinkedListNode] = None
+        self.head: Optional[DoublyLinkedListNode] = None
+        self.tail: Optional[DoublyLinkedListNode] = None
         self.__length: int = 0
 
     @property
@@ -17,20 +18,23 @@ class SinglyLinkedList(BaseLinkedList):
         return self.__length
 
     def _check_index(self, index: int) -> None:
-        if index < 0 or index > self.__length:
+        if index < 0 or index >= self.__length:
             raise IndexError(f"Index {index} is out of bounds")
 
     def __insert_by(self, index: int, value: Any) -> None:
+        new_node = DoublyLinkedListNode(value)
+
         current = self.head
-        for _ in range(index - 1):
+        for _ in range(index):
             current = current.next
 
-        new_node = SinglyLinkedListNode(value)
-        new_node.next = current.next
-        current.next = new_node
+        new_node.prev = current.prev
+        new_node.next = current
+        current.prev.next = new_node
+        current.prev = new_node
 
     def insert(self, index: int, value: Any) -> None:
-        """Inserts a new node at the index-th Node of the Singly Linked List.
+        """Insert a new Node at the index-th Node of the Doubly Linked List.
         Time Complexity: O(n)
         :param index:
         :param value:
@@ -46,8 +50,8 @@ class SinglyLinkedList(BaseLinkedList):
             self.__insert_by(index, value)
             self.__length += 1
 
-    def pop(self, index: int) -> "SinglyLinkedList":
-        """Removes the index-th Node of the Singly Linked List and returns it.
+    def pop(self, index: int) -> None:
+        """Delete the index-th Node of the Doubly Linked List.
         Time Complexity: O(n)
         :param index:
         :raises IndexError: If index is out of bounds.
@@ -55,81 +59,88 @@ class SinglyLinkedList(BaseLinkedList):
         self._check_index(index)
 
         if index == 0:
-            value = self.head
+            value = self.head.data
             self.head = self.head.next
+            if self.head:
+                self.head.prev = None
+        elif index == self.__length - 1:
+            value = self.tail.data
+            self.tail = self.tail.prev
+            if self.tail:
+                self.tail.next = None
         else:
             current = self.head
-            for _ in range(index - 1):
+            for _ in range(index):
                 current = current.next
-
-            value = current
-            current.next = (
-                None if current.next.next is None else current.next.next
-            )
+            value = current.data
+            current.prev.next = current.next
+            current.next.prev = current.prev
 
         self.__length -= 1
+
         return value
 
     def prepend(self, value: Any) -> None:
-        """Inserts a new Node at the beginning of the Singly Linked List.
+        """Insert a new Node at the beginning of the Doubly Linked List.
         Time Complexity: O(1)
         :param value:
         """
-        new_node = SinglyLinkedListNode(value)
+        new_node = DoublyLinkedListNode(value)
 
-        if self.head:
+        if self.head is None:
+            self.head = self.tail = new_node
+        else:
             new_node.next = self.head
-        self.head = new_node
+            self.head.prev = new_node
+            self.head = new_node
 
         self.__length += 1
 
     def append(self, value: Any) -> None:
-        """Inserts a new Nodes at the end of the Singly Linked List.
-        Time Complexity: O(n)
+        """Inserts a new Node at the end of the Doubly Linked List.
+        Time Complexity: O(1)
         :param value:
         """
-        new_node = SinglyLinkedListNode(value)
+        new_node = DoublyLinkedListNode(value)
 
         if self.head is None:
-            self.head = new_node
+            self.head = self.tail = new_node
         else:
-            last = self.head
-            while last.next is not None:
-                last = last.next
-
-            last.next = new_node
+            new_node.prev = self.tail
+            self.tail.next = new_node
+            self.tail = new_node
 
         self.__length += 1
 
     def remove(self, value: Any) -> None:
-        """Remove by value Node of the Singly Linked List.
+        """Remove by value Node of the Doubly Linked List.
         Time Complexity: O(n)
         :param value:
         :raises ValueError: If value not in list.
         """
-        if self.head is None:
-            return
 
-        if self.head.data == value:
-            self.head = self.head.next
-            self.__length -= 1
-            return
-
-        temp = self.head
-        current = self.head.next
-        while current:
+        current = self.head
+        while current is not None:
             if current.data == value:
-                temp.next = current.next
+                if current.prev is not None:
+                    current.prev.next = current.next
+                else:
+                    self.head = current.next
+
+                if current.next is not None:
+                    current.next.prev = current.prev
+                else:
+                    self.tail = current.prev
+
                 self.__length -= 1
                 return
 
-            temp = current
             current = current.next
 
         raise ValueError(f"{value} not in list")
 
-    def get(self, index: int) -> Optional["SinglyLinkedList"]:
-        """Get the value of index-th Node in the Singly Linked List.
+    def get(self, index: int) -> Optional[Any]:
+        """Get the value of index-th Node in the Doubly Linked List.
         Time Complexity: O(n)
         :param index:
         :raises IndexError: If index is out of bounds.
@@ -137,7 +148,7 @@ class SinglyLinkedList(BaseLinkedList):
         self._check_index(index)
 
         if self.head is None:
-            return None
+            return
 
         current = self.head
         for _ in range(index):
@@ -147,7 +158,7 @@ class SinglyLinkedList(BaseLinkedList):
 
     def append_many(self, values: Sequence) -> None:
         """
-        Inserts multiple values into a Singly Linked List.
+        Inserts multiple values into a Doubly Linked List.
         :param values:
         Time Complexity: O(n^2)
         """
@@ -155,9 +166,9 @@ class SinglyLinkedList(BaseLinkedList):
 
 
 if __name__ == "__main__":
-    linked_list = SinglyLinkedList()
+    linked_list = DoublyLinkedList()
     linked_list.append_many([1, 2, 3, 4, 5])
+    print(linked_list.length)
 
-    printer = PrintLinkedList(linked_list.head)
+    printer = PrintLinkedList(linked_list.head, separator="<->")
     printer.print()
-    printer.print_with_forward_arrow()
