@@ -8,35 +8,42 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
+flake8-pyproject = "^1.2.3"
 
 [tool.poetry.group.dev.dependencies]
-black = "^24.8.0"
-isort = "^5.13.2"
-pylint = "^3.3.0"
-mypy = "^1.11.2"
-flake8 = "^7.1.1"
+black = "24.8.0"
+isort = "5.13.2"
+pylint = "3.3.0"
+mypy = "1.11.2"
+flake8 = "7.1.1"
+
+[tool.poetry.group.test.dependencies]
+pytest = "8.3.2"
+faker = "28.0.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
-max-complexity = 10
-per-file-ignores = { "__init__.py" = "F401" }
-
 [tool.flake8]
 line-length = 79
-extend-ignore = ["E203"]
+max-complexity = 5
+per-file-ignores = "__init__.py:F401"
+extend-ignore = ["E203", "F403", "F401"]
 exclude = [
-    ".git",
-    "*/__pycache__/",
-    "*/env",
-    "*/.env",
-    "*/venv",
-    "*/.venv",
+    ".git/",
+    "__pycache__/",
+    "**/migrations/",
+    "manage.py",
+    "**settings/*.py",
+    "env/",
+    "venv/",
+    ".env/",
+    ".venv/",
     "tests/",
     ".pytest_cache",
-    ".vscode",
-    ".idea"
+    ".vscode/",
+    ".idea/"
 ]
 
 [tool.flake8.ignore]
@@ -65,3 +72,8 @@ multi_line_output = 3
 include_trailing_comma = true
 force_grid_wrap = 0
 use_parentheses = true
+known_local_folder = [
+    "basic_algorithms",
+    "data_structures",
+    "design_gurus",
+]

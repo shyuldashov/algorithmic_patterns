@@ -71,7 +71,7 @@
 
 ## In-place Reversal of a Linked List
 
-1. [Reverse a LinkedList]() | [Solve](in_place_reverse_linked_list/easy/reverse_linked_list.py)
+1. [Reverse a LinkedList](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/reverse-a-linkedlist-easy) | [Solve](in_place_reverse_linked_list/easy/reverse_linked_list.py)
 2. []() | [Solve]()
 3. []() | [Solve]()
 4. []() | [Solve]()
