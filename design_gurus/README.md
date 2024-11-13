@@ -66,4 +66,15 @@
 4. [Find the Duplicate Number](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/find-the-duplicate-number-easy) | [Solve](cyclic_sort/easy/find_the_duplicate_number.py)
 5. [Find all Duplicate Numbers](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/find-all-duplicate-numbers-easy) | [Solve](cyclic_sort/easy/find_all_duplicate_nums.py)
 6. [Find the Corrupt Pair](https://www.designgurus.io/course-play/grokking-the-coding-interview/doc/problem-challenge-1-find-the-corrupt-pair-easy) | [Solve](cyclic_sort/easy/find_the_corrupt_pair.py)
+
+---
+
+## In-place Reversal of a Linked List
+
+1. [Reverse a LinkedList]() | [Solve](in_place_reverse_linked_list/easy/reverse_linked_list.py)
+2. []() | [Solve]()
+3. []() | [Solve]()
+4. []() | [Solve]()
+5. []() | [Solve]()
+6. []() | [Solve]()
 7. []() | [Solve]()
