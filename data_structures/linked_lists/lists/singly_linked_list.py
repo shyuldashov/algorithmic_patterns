@@ -46,29 +46,30 @@ class SinglyLinkedList(BaseLinkedList):
             self.__insert_by(index, value)
             self.__length += 1
 
-    def pop(self, index: int) -> "SinglyLinkedList":
+    def pop(self, index: int) -> "SinglyLinkedListNode":
         """Removes the index-th Node of the Singly Linked List and returns it.
         Time Complexity: O(n)
         :param index:
-        :raises IndexError: If index is out of bounds.
+        :raises IndexError: If index is out of bounds or the list is empty.
         """
         self._check_index(index)
 
+        if self.head is None:
+            raise IndexError("Pop from empty list")
+
         if index == 0:
-            value = self.head
+            removed_node = self.head
             self.head = self.head.next
         else:
             current = self.head
             for _ in range(index - 1):
                 current = current.next
 
-            value = current
-            current.next = (
-                None if current.next.next is None else current.next.next
-            )
+            removed_node = current.next
+            current.next = current.next.next
 
         self.__length -= 1
-        return value
+        return removed_node
 
     def prepend(self, value: Any) -> None:
         """Inserts a new Node at the beginning of the Singly Linked List.
@@ -132,12 +133,12 @@ class SinglyLinkedList(BaseLinkedList):
         """Get the value of index-th Node in the Singly Linked List.
         Time Complexity: O(n)
         :param index:
-        :raises IndexError: If index is out of bounds.
+        :raises IndexError: If index is out of bounds or the list is empty.
         """
         self._check_index(index)
 
         if self.head is None:
-            return None
+            raise IndexError("Get from empty list")
 
         current = self.head
         for _ in range(index):
@@ -157,6 +158,7 @@ class SinglyLinkedList(BaseLinkedList):
 if __name__ == "__main__":
     linked_list = SinglyLinkedList()
     linked_list.append_many([1, 2, 3, 4, 5])
+    linked_list.insert(2, 10)
 
     printer = PrintLinkedList(linked_list.head)
     printer.print()
