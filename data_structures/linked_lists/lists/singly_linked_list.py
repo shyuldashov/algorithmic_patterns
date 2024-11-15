@@ -1,13 +1,13 @@
 from typing import Any, Optional, Sequence
 
-from data_structures.linked_lists.base import BaseLinkedList
+from data_structures.linked_lists.base import AbstractLinkedList
 from data_structures.linked_lists.nodes import SinglyLinkedListNode
 from data_structures.linked_lists.utils import PrintLinkedList
 
 __all__ = ["SinglyLinkedList"]
 
 
-class SinglyLinkedList(BaseLinkedList):
+class SinglyLinkedList(AbstractLinkedList):
     def __init__(self) -> None:
         self.head: Optional[SinglyLinkedListNode] = None
         self.__length: int = 0

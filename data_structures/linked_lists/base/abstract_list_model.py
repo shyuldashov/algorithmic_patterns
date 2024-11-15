@@ -2,14 +2,19 @@ from abc import ABC, abstractmethod
 from typing import Any
 
 
-class BaseLinkedList(ABC):
+class AbstractLinkedList(ABC):
+
+    @property
+    @abstractmethod
+    def length(self) -> int:
+        pass
 
     @abstractmethod
     def insert(self, index: int, value: Any) -> None:
         pass
 
     @abstractmethod
-    def pop(self, index: int) -> "BaseLinkedList":
+    def pop(self, index: int) -> "AbstractLinkedList":
         pass
 
     @abstractmethod
@@ -21,10 +26,5 @@ class BaseLinkedList(ABC):
         pass
 
     @abstractmethod
-    def get(self, index: int) -> "BaseLinkedList":
-        pass
-
-    @property
-    @abstractmethod
-    def length(self) -> int:
+    def get(self, index: int) -> "AbstractLinkedList":
         pass

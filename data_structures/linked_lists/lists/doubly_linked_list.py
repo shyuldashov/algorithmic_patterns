@@ -1,13 +1,13 @@
 from typing import Any, Optional, Sequence
 
-from data_structures.linked_lists.base import BaseLinkedList
+from data_structures.linked_lists.base import AbstractLinkedList
 from data_structures.linked_lists.nodes import DoublyLinkedListNode
 from data_structures.linked_lists.utils import PrintLinkedList
 
 __all__ = ["DoublyLinkedList"]
 
 
-class DoublyLinkedList(BaseLinkedList):
+class DoublyLinkedList(AbstractLinkedList):
     def __init__(self) -> None:
         self.head: Optional[DoublyLinkedListNode] = None
         self.tail: Optional[DoublyLinkedListNode] = None
